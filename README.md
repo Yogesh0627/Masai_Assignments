@@ -22,3 +22,4 @@ Day-4   (completed)
 first:- problem solved
 second:- problem solved
 
+All files are deleted because they are not named with Index.html 
