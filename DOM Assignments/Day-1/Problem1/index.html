@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Mini Calculator</h1>
+    
+    <input id="first" type="number" placeholder="Enter First Number" >
+    <input id="second" type="number" placeholder="Enter Second Number">
+    <h2 id="result"> Result will be displayed here <span id="answer"></span></h2>
+    <!-- Buttons -->
+    <div class="Functionalities">
+        <button onclick="Addition()">Addition</button>
+        <button onclick="Subtraction()">Subtraction</button>
+        <button onclick="Multiplication()">Multiplication</button>
+        <button onclick="Division()">Division</button>
+    </div>
+</body>
+<script>
+    let b= document.getElementById("second");
+    num1=parseInt(b.value)
+    let a= document.getElementById("first");
+    num2=parseInt(a.value)
+    let answer=document.getElementById("result");
+    function Addition(){
+        answer.innerHTML=num1+num2
+        
+        
+        
+    }
+</script>
+</html>
