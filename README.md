@@ -23,3 +23,9 @@ first:- problem solved
 second:- problem solved
 
 All files are deleted because they are not named with Index.html 
+
+Day -5 Assignments are completed
+
+Day-6 assignmnets are completed ( Grid )
+
+DOM day-1 Assignments are completed 
