@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.box h1{
+    /* border: 2px solid red; */
+    text-align: center;
+    font-family:Poppins,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-weight: 800;
+    font-size: 2.125rem;
+}
+
+.items{
+    display: grid;
+    width: 90%;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(3,1fr);
+    /* border: 2px solid orange; */
+    margin:auto;
+    grid-gap: 20px;
+}
+
+.items >div >img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Gallery */
+
+.investors{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 380px;
+    width: 80%;
+    margin: 50px auto;
+    grid-gap: 25px;
+    /* border: 2px solid indianred; */
+}
+
+.investors .investor{
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.investors .investor img{
+    width: 100%;
+    height: 70%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#one{
+    text-align: center;
+    font-family:Poppins,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-weight: 800;
+    font-size: 2.125rem;
+}
+
+.information{
+    text-align: center;
+}
+.investor .information .name{
+    font-weight: 400;
+    font-size: 22px;
+    /* line-height: 1; */
+    margin-top: 2px;
+}
+
+.investor .information .designation{
+    color: grey;
+    margin-top: 2px;
+}
+
+.investor .information >img{
+    width: 50%;
+}

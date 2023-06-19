@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    background-color:rgb(241, 225, 205);
+     /* border: 2px solid maroon; */
+    padding: 50px;
+    } 
+
+
+.box{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 150px;
+    /* border: 2px solid purple; */
+    /* padding: 100px; */
+    margin: auto;
+    grid-gap: 30px;
+
+    
+}
+
+@media screen and (max-width: 375px){
+    .box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 320px){
+    .box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.coffee{
+    /* border: 2px solid red; */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: auto;
+}
+
+.box .coffee .price{
+    text-align: right;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: goldenrod;
+    font-weight: 700;
+    margin-top: -45px;
+
+}
+
+.coffee .details{
+    margin-top: 20px;
+}
