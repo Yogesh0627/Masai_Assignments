@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>
+            Masai Calculator
+        </h1>
+    </div>
+
+    <!-- body -->
+    <div class="main">
+        <div class="calculator">
+            <div class="display"></div>
+            <div class="keyboard">
+                <div class="button"><p>1</p></div>
+                <div class="button"><p>2</p></div>
+                <div class="button"><p>3</p></div>
+                <div class="button black white" ><p>+</p></div>
+                <div class="button"><p>4</p></div>
+                <div class="button"><p>5</p></div>
+                <div class="button"><p>6</p></div>
+                <div class="button black white"><p>-</p></div>
+                <div class="button"><p>7</p></div>
+                <div class="button"><p>8</p></div>
+                <div class="button"><p>9</p></div>
+                <div class="button black white"><p>*</p></div>
+                <div class="button orange white"><p>C</p></div>
+                <div class="button"><p>0</p></div>
+                <div class="button black white"><p>=</p></div>
+                <div class="button black white"><p>/</p></div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+
+<script>
+    let keys  = document.querySelectorAll(".keyboard >div")
+
+let bag =""
+for(let i=0; i<keys.length  ; i++){
+    keys[i].addEventListener("click",function(event){
+       let targetNumber  = event.target.innerText;
+
+
+       if(targetNumber == "C"){
+        bag="";
+        document.querySelector(".display").innerText = ""
+      }
+      else if(targetNumber=="="){
+        document.querySelector(".display").innerText =eval(bag)
+       
+      }
+      
+      else{
+       bag+=targetNumber
+     
+       
+    
+       document.querySelector(".display").innerText = bag
+      }
+    })
+
+}
+
+</script>
+</html>
