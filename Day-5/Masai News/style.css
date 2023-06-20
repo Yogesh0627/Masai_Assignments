@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     box-sizing: border-box;
     font-family: Poppins,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
@@ -111,4 +112,119 @@
 
 .container2 .box2 .investor{
     margin: auto;
+=======
+*{
+    box-sizing: border-box;
+    font-family: Poppins,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+
+}
+.container >h2{
+    text-align: center;
+    margin: 30px auto;
+    font-weight: 700;
+    font-size: 36px;
+}
+.container{
+    /* border: 2px solid black; */
+    padding: 5px;
+    width: 100%;
+    background-color:#F2F6FF
+}
+
+.container .box{
+    /* border: 2px solid darkblue; */
+    padding: 5px;
+    width: 90%;
+    margin: 10px auto;
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+.container .box .item{
+    /* border: 2px solid red; */
+    padding: 5px;
+    width: 28%;
+    margin: auto;
+    height:470px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    background-color: white;
+}
+.container .box .item .image{
+    /* border: 2px solid green; */
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+}
+.image img{
+    width: 100%;
+}
+.data{
+    /* border: 2px solid purple; */
+    width: 90%;
+    margin: auto;
+}
+.date{
+    color: blue;
+}
+.bold{
+    font-weight: 700;
+    font-size: 20px;
+}
+.para{
+    
+    color: #544d4f;
+    /* border: 2px solid orange; */
+    width: 90%;
+    margin: auto;
+    font-weight:400;
+
+}
+
+.container .see{
+    text-align:center; 
+    /* border:2px solid maroon;  */
+    margin-top:60px;
+    margin-bottom: 20px;
+}
+
+.container .see button{
+     color: red;
+     border: 1px solid red;
+     height: 35px;
+     width: 120px;
+     font-size: .875rem;
+     font-weight: 600;
+     background-color: transparent;
+     letter-spacing: .05em;
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     padding: 2px;
+     margin: auto;
+     border-radius:5px ;
+     /* text-align: center; */
+}
+
+.heading2{
+    text-align: center;
+    /* border: 2px solid yellow; */
+    
+}
+
+.heading2 >h2{
+    font-weight: 800;
+    font-size: 34px;
+    margin-top:  80px;
+}
+
+.container2 .box2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    /* border: 2px solid red; */
+    margin: auto;
+}
+
+.container2 .box2 .investor{
+    margin: auto;
+>>>>>>> ef00ffda89294c689b808fc87aecc01643ae34fa
 }

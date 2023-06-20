@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container{
     display: grid;
     grid-template-columns:  repeat(4,1fr);
@@ -66,3 +67,73 @@
 }
 
 
+=======
+.container{
+    display: grid;
+    grid-template-columns:  repeat(4,1fr);
+    grid-auto-rows: 150px;   
+    width: 90%;
+    margin: 100px auto;
+    grid-gap: 20px;
+    grid-template-areas:"A A B B "
+                        "C D D D"
+                        "E E E E"
+}
+.container >div{
+    background-color: #444444;
+    font-size: 25px;
+    border-radius: 10px;
+    padding-left: 20px;
+    color: white; 
+}
+
+.container div:nth-child(1){
+    grid-area: A;    
+}
+
+.container div:nth-child(2){
+    grid-area: B;
+}
+
+.container div:nth-child(3){
+    grid-area: C;
+}
+
+.container div:nth-child(4){
+    grid-area: D;
+}
+
+.container div:nth-child(5){
+    grid-area: E;
+}
+
+.container div:nth-child(6){
+    grid-area: F;
+}
+
+.container div:nth-child(7){
+    grid-area: G;
+}
+
+.container div:nth-child(8){
+    grid-area: H;
+}
+
+.container div:nth-child(9){
+    grid-area: I;
+}
+
+.container div:nth-child(10){
+    grid-area: J;
+}
+
+.container div:nth-child(11){
+    grid-area: K;
+}
+
+.container div:nth-child(12){
+    grid-area: L;
+}
+
+
+>>>>>>> ef00ffda89294c689b808fc87aecc01643ae34fa

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .heading{
     text-align: center;
     /* border: 3px solid orangered; */
@@ -47,4 +48,55 @@
 .container{
 max-width: 100%;
 
+=======
+.heading{
+    text-align: center;
+    /* border: 3px solid orangered; */
+    
+}
+.heading h2{
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    font-size: 2rem;
+}
+.heading p{
+    color: grey;
+    margin-top: -15px;
+}
+
+.image img{
+    width: 100px;
+    height:90px
+    
+}
+
+.introduction{
+    /* width: 300px; */
+    /* border: 2px solid red; */
+}
+.item{
+    /* border: 1px solid purple; */
+    padding: 5px;
+    width: 21%;
+    margin: auto;
+}
+.Box1{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid darkviolet; */
+    padding: 5px;
+    margin-bottom: 5px;
+    width:1110px
+}
+.Box{
+    /* border: 2px solid black; */
+    padding: 5px;
+    margin: 40px auto;
+    background-color: whitesmoke;
+    width:75%
+}
+.container{
+max-width: 100%;
+
+>>>>>>> ef00ffda89294c689b808fc87aecc01643ae34fa
 }

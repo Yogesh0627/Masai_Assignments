@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .heading{
     text-align: center;
     font-size: 25px;
@@ -65,4 +66,73 @@
 
 .table .row .white{
     color: white;
+=======
+.heading{
+    text-align: center;
+    font-size: 25px;
+    /* width: 600px;
+    height:150px; */
+    /* border: 2px solid black; */
+    margin: auto ;
+    color: teal;
+}
+
+.display{
+    width:318px;
+    height:70px;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: inset -1px -1px 5px grey ;
+}
+
+.table .button{
+    width: 70px;
+    height: 70px;
+    /* border: 2px solid violet; */
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    box-shadow: inset -1px -1px 2px grey ;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.table .row{
+    display: flex;
+    /* border: 2px solid pink; */
+    justify-content: space-between;
+    width: 330px;
+}
+
+.table{
+    /* border: 3px solid black; */
+    margin-top: 10px; 
+}
+
+.body{
+    /* border: 2px solid brown; */
+    width: 330px;
+    margin: auto;
+}
+
+.container{
+    margin: auto;
+    /* border: 2px solid red; */
+    width: 360px;
+    height: 430px;
+    padding: 50px;
+    box-shadow: inset -1px -1px 5px grey;
+}
+
+.table .row .black{
+    background-color: black;
+}
+.table .row .orange{
+    background-color: orangered;
+}
+
+.table .row .white{
+    color: white;
+>>>>>>> ef00ffda89294c689b808fc87aecc01643ae34fa
 }
