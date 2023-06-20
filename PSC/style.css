@@ -22,13 +22,13 @@
     
 }
 
-@media screen and (max-width: 375px){
+@media screen and (min-width: 320px) and (max-width:767px){
     .box {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (min-width:768px) and (max-width: 1024px){
     .box {
         grid-template-columns: repeat(1, 1fr);
     }

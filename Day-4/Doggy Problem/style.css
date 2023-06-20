@@ -1,6 +1,6 @@
 .heading{
     text-align: center;
-    border: 3px solid orangered;
+    /* border: 3px solid orangered; */
     
 }
 .heading h2{
@@ -20,11 +20,11 @@
 }
 
 .introduction{
-    width: 300px;
-    border: 2px solid red;
+    /* width: 300px; */
+    /* border: 2px solid red; */
 }
 .item{
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     padding: 5px;
     width: 21%;
     margin: auto;
@@ -32,13 +32,13 @@
 .Box1{
     display: flex;
     justify-content: space-between;
-    border: 2px solid darkviolet;
+    /* border: 2px solid darkviolet; */
     padding: 5px;
     margin-bottom: 5px;
     width:1110px
 }
 .Box{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 5px;
     margin: 40px auto;
     background-color: whitesmoke;

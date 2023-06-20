@@ -22,8 +22,12 @@ Day-4   (completed)
 first:- problem solved
 second:- problem solved
 
+<<<<<<< HEAD
 After the name change to index.html
 
 
 
 
+=======
+All files are deleted because they are not named with Index.html 
+>>>>>>> 39bf84b24c7bc9889a6b990fbfcd38861b4bca0a
