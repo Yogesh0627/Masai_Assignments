@@ -39,4 +39,8 @@ Day -5 Assignments are completed
 Day-6 assignmnets are completed ( Grid )
 
 DOM day-1 Assignments are completed 
->>>>>>> ef00ffda89294c689b808fc87aecc01643ae34fa
+
+DOM day-2 Assignmnets completed
+
+Promise assignments completed
+
