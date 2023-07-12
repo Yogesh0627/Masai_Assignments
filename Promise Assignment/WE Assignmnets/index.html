@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem-1</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let count=1;
+     let promise1 = new Promise(function(resolve,reject){
+        if (count > 0){
+            resolve("Positive")
+        }
+        else{reject("Negative")}
+     })
+
+     promise1.then(function(data){
+        console.log(data)
+     }).catch(function(data1){
+        console.log(data1)
+     })
+
+
+
+</script>
+</html>
