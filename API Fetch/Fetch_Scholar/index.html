@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            width: 80%;
+            margin: auto;
+        }
+
+        #container>div {
+            /*border: 2px solid red;*/
+            width: 80%;
+            height: fit-content;
+        }
+
+        #container>div>img {
+            width: 70%;
+            border: 2px solid black;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;"> Shopping</h1>
+    <input type="search" id="searchInput" placeholder="search..." onchange="search(this)"><br><br>
+    <select name="" id="filter" onchange="selection(this)" style="font-weight: 800; border:2px solid black">
+        <option value="">Select Category</option>
+        <option value="men's clothing">Men's Clothing</option>
+        <option value="jewelery">Jewellery</option>
+        <option value="electronics">Electronic Devices</option>
+        <option value="women's clothing">Women's Clothing</option>
+    </select>
+
+    <div id="container">
+
+    </div>
+
+
+</body>
+<script>
+
+
+    let parent = document.getElementById("container")
+    let myApi = "https://fakestoreapi.com/products"
+
+    let array = []
+
+    const fetchData = async () => {
+        await fetch(myApi).then(async (data) => {
+            array = await data.json();
+            display(array)
+        })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+    fetchData();
+    function search(e) {
+        const category = e.value.toLowerCase();
+        console.log(category)
+        let new_data = []
+
+        console.log(new_data)
+
+        for (let i = 0; i < array.length; i++) {
+            let product = array[i];
+            if (product.title.toLowerCase().includes(category)) {
+                new_data.push(product);
+            }
+        }
+
+
+
+        if (new_data.length == 0) {
+            display(array)
+        } else {
+            display(new_data)
+        }
+    }
+    function selection(e) {
+        const category = e.value;
+        let new_data = []
+
+
+        for (let i = 0; i < array.length; i++) {
+            let product = array[i];
+            if (product.category == category) {
+                new_data.push(product);
+            }
+        }
+
+
+
+        if (new_data.length == 0) {
+            display(array)
+        } else {
+            display(new_data)
+        }
+
+    }
+
+    function display(result) {
+        console.log(result)
+        document.getElementById("container").innerHTML = "";
+        result.forEach(function (element) {
+            //console.log(element)
+            let item = document.createElement("div")
+            let category = document.createElement("h2")
+            category.innerText = element.category
+            let title = document.createElement("h3")
+            title.innerText = element.title
+            let description = document.createElement("h5")
+            description.innerText = element.description
+            let image = document.createElement("img")
+            image.setAttribute("src", element.image)
+            let price = document.createElement("h3")
+            price.innerText = "Price :- " + element.price
+
+            let id = document.createElement("h3")
+            id.innerText = element.id
+
+            let rating = document.createElement("h4")
+            rating.innerText = "Ratings :-  " + element.rating.rate + " / " + element.rating.count
+
+            item.append(id, category, title, image, description, price, rating)
+            parent.append(item)
+        })
+
+    }
+</script>
+
+</html>
+<!-- <div>
+    <h2>category</h2>
+    <h2>description</h2>
+    image
+    price
+    title
+</div> -->
