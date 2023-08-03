@@ -35,7 +35,7 @@
     async function fetchingApi(){
         let answer = await fetch("https://jsonplaceholder.typicode.com/todos")
         answer = await answer.json()
-        console.warn(answer);
+
         document.getElementById("data").innerHTML = answer.map((todos) =>
         `<tr>
             <td>${todos.userId}</td>
