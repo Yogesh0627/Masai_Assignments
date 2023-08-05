@@ -3,24 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>timer</title>
+    <title>Timer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1 class="heading">Timer</h1>
     <div class="timer">
         <div class="display">
-            <input type="timer" id="hours" placeholder="Hr"><span>:</span>
-            <input type="timer" id="minutes" placeholder="Min"><span>:</span>
-            <input type="timer" id="seconds" placeholder="seconds">
+            <input type="text" id="hours" placeholder="Hours"><span>:</span>
+            <input type="text" id="minutes" placeholder="Minutes"><span>:</span>
+            <input type="text" id="seconds" placeholder="Seconds">
         </div>
         <div class="options">
-            <button>Start</button>
-            <button>Reset</button>
+            <button onclick="start()">Start</button>
+            <button onclick="reset()">Reset</button>
+            <button onclick="pause()">Pause</button>
         </div>
     </div>
 </body>
 <script>
-    
+    id=null
+    function start(){
+        let hours = document.getElementById("hours");
+        let minutes = document.getElementById("minutes");
+        let seconds = document.getElementById("seconds");
+
+        let hour = Number(hours.value)
+        let minute = Number(minutes.value)
+        let second = Number(seconds.value)
+
+        id=setInterval(function(){
+
+            if (second <= 0 && minute <= 0 && hour <= 0) {
+                clearInterval(id);
+                return;
+            }
+            if (second == 0) {
+
+                second=60
+                
+                if (minute <= 0){
+                    minute=60
+                    
+                    if (hour <= 0 && minute <= 0){
+                        hour=0
+                        pause()
+                        
+                    }
+                    hour--
+                    hours.value=hour
+                };
+                minute--
+                minutes.value=minute;
+            }
+            --second
+            seconds.value=second
+        },1000)
+    }
+
+    function reset(){
+        clearInterval(id)
+        let hours = document.getElementById("hours").value="";
+        let minutes = document.getElementById("minutes").value="";
+        let seconds = document.getElementById("seconds").value="";
+        
+    }
+
+    function pause(){
+        clearInterval(id)
+    }
 </script>
 </html>

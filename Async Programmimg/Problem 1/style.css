@@ -28,8 +28,9 @@ body{
     margin: auto;
     text-align: center;
     color: darkblue;
-    font-size: 20px;
+    font-size: 30px;
     background-color: white;
+    font-weight: 500;
 
 }
 
@@ -39,8 +40,9 @@ body{
 }
 
 .options{
-    margin: 20px auto;
+    margin: 20px ;
     text-align: center;
+    /* border: 2px solid green; */
 }
 
 .options >button{
@@ -55,6 +57,7 @@ body{
 }
 .options >button:hover{
     cursor: pointer;
+    background-color: aqua;
 }
 .timer{
     width: fit-content;
