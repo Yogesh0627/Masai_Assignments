@@ -44,3 +44,8 @@ DOM day-2 Assignmnets completed
 
 Promise assignments completed
 
+Asynchronism Assignment Completed
+
+Fetch Assignment completed 
+
+All HTML CSS Assignments are completed
