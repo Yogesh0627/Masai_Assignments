@@ -28,19 +28,16 @@ After the name change to index.html
 
 
 
-=======
+
 All files are deleted because they are not named with Index.html 
-<<<<<<< HEAD
->>>>>>> 39bf84b24c7bc9889a6b990fbfcd38861b4bca0a
-=======
 
 Day -5 Assignments are completed
 
-Day-6 assignmnets are completed ( Grid )
+Day-6 Assignments are completed ( Grid )
 
 DOM day-1 Assignments are completed 
 
-DOM day-2 Assignmnets completed
+DOM day-2 Assignments completed
 
 Promise assignments completed
 
