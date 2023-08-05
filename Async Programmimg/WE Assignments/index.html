@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer-Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timer">
+        <h1 class="heading">Timer Clock</h1>
+        <div class="clock">
+            <div id="hour">00</div><span>:</span>
+            <div id="minutes">00</div><span>:</span>
+            <div id="seconds">00</div>
+        </div>
+        <div class="options">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+</body>
+<script>
+    id=null
+    //let hoursEl = document.querySelector(".hour");
+    //let minutesEl = document.querySelector(".minutes");
+    //let secondsEl = document.querySelector("#seconds")
+
+    //  Start Button
+    let startButton=document.getElementById("start");
+        startButton.addEventListener("click",function(){
+        let hoursEl = document.getElementById("hour");
+        let minutesEl =document.getElementById("minutes");
+        let secondsEl =document.getElementById("seconds");
+        
+        let hours=0;
+        let minutes=0;
+        let seconds=0;
+        id=setInterval(function(){
+            seconds++
+            if (seconds >= 60){
+                seconds=0;
+                minutes++
+                if (minutes >= 60){
+                    minutes=0;
+                    hours++
+                    hoursEl.innerText=hours
+                }
+            minutesEl.innerText = minutes}
+            secondsEl.innerText = seconds},1000);
+
+        })
+    
+    
+    
+    //  Stop    Button
+        let stopButton=document.getElementById("stop");
+        stopButton.addEventListener("click",function(){
+        clearInterval(id)})
+
+        
+
+    //  Reset   Button
+    let resetButton=document.getElementById("reset");
+    resetButton.addEventListener("click",function(){
+        clearInterval(id)
+        let hoursEl = document.getElementById("hour").innerText="00";
+        let minutesEl =document.getElementById("minutes").innerText="00";
+        let secondsEl =document.getElementById("seconds").innerText="00";
+    })
+
+</script>
+</html>
+
