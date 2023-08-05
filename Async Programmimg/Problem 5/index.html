@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide-Show</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading"> Anime Slide-Show</h1>
+        <div class="pictures">
+            <img id="image" src="" alt="">
+        </div>
+        <div class="options">
+            
+            <button id="prev">Previous</button>
+            <button id="play">Play</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+</body>
+<script>
+    id=null
+    let slideShow = document.querySelector("#image")
+    let previous = document.querySelector("#prev")
+    let next = document.querySelector("#next")
+    const play = document.querySelector("#play")
+
+    let imagesArr=["https://th.bing.com/th/id/R.855b2319c91030873fe40b903cfe0a5f?rik=kM91ARRBQG0AMw&riu=http%3a%2f%2fwww.hdwallpaper.nu%2fwp-content%2fuploads%2f2015%2f06%2f1424161722-dragon-ball.jpg&ehk=DmZKhm3scvc2eNntgKJlq8gojsYkmfNyOLNmdZ%2f5bM8%3d&risl=1&pid=ImgRaw&r=0",
+    "https://wallpapercave.com/wp/wp6778243.jpg","https://i.ytimg.com/vi/jnJjBq_7e-c/maxresdefault.jpg"
+    ,"https://theglobalcoverage.com/wp-content/uploads/2021/01/anime-black-clover-1.jpg","https://wallpapercave.com/wp/wp5060560.png","https://www.itl.cat/pngfile/big/16-166474_black-clover-wallpaper-hd.jpg"
+    ,"https://wallpapercave.com/wp/wp7626926.jpg","https://images8.alphacoders.com/118/1180819.jpg","https://wallpapercave.com/wp/wp7231926.jpg" 
+    ,"https://cdn.wallpapersafari.com/45/46/4itXjO.png","https://wallpapercave.com/wp/wp2460200.jpg","https://wallsdesk.com/wp-content/uploads/2017/01/Fairy-Tail-HD-Wallpaper.jpg",
+    "https://i.pinimg.com/originals/90/47/aa/9047aa0bfd3948e0802514d639494c77.jpg","https://images3.alphacoders.com/106/thumb-1920-1068931.png","https://wallpapers.com/images/featured/c0pujiakubq5rwas.jpg",
+    
+    "https://images2.alphacoders.com/981/thumb-1920-981462.jpg","https://hdqwalls.com/wallpapers/attack-on-titan-2-a2.jpg","https://wallpapercave.com/wp/wp8276592.jpg",
+    "https://images5.alphacoders.com/759/759145.jpg","https://external-preview.redd.it/fofOa-h_ns4elEeAa0FyLhaayMjh1dIcofZYKFK2008.jpg?auto=webp&s=829b0559f1389cd400540470019f3abf054ce7a4","https://i.pinimg.com/736x/25/0c/5d/250c5d9db0b8e3eb2f571dc630edeceb--facebook.jpg"
+    ,"https://www.ps4wallpapers.com/wp-content/uploads/2017/04/PS4Wallpapers.com_47215354-death-note-wallpaper-1056x594.jpg","https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/07/death-note-episode-featured.jpg"
+    ,"https://wallpaperaccess.com/full/2026102.png",
+    "https://wallpapercave.com/wp/wp9070413.jpg","https://wallpapercave.com/wp/wp2715108.jpg","https://wallpapercave.com/wp/wp2715262.jpg"];
+
+    currentImage=0
+    slideShow.setAttribute("src",imagesArr[currentImage])
+    //slideShow.setAttribute("src",imagesArr[imagesArr.length-1])
+
+    //  Play Button
+
+    play.addEventListener("click",function(){
+        id=setInterval(function(){
+            currentImage++
+            if (currentImage>=imagesArr.length){
+                currentImage=0
+            }
+            slideShow.setAttribute("src",imagesArr[currentImage])},2000)
+
+    })
+
+      // Previous Button 
+
+    previous.addEventListener("click",function(){
+        clearInterval(id)
+    currentImage--
+    if (currentImage < 0){
+        currentImage = imagesArr.length-1;
+    }
+    slideShow.setAttribute("src",imagesArr[currentImage])
+    })
+
+    //  Next Button
+
+    next.addEventListener("click",function(){
+        clearInterval(id)
+        currentImage++
+        if (currentImage>=imagesArr.length){
+            currentImage=0
+        }
+        slideShow.setAttribute("src",imagesArr[currentImage])
+    })
+
+</script>
+</html>
