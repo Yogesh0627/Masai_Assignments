@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop-Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p class="heading">My Stopwatch</p>
+
+        <div class="stopwatch">
+        
+            <div class="milliseconds">
+                00
+                
+
+            </div>
+            <div class="seconds">
+                00
+            </div>
+        </div>
+
+        <div class="inputs">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </div>
+
+    </div>
+</body>
+
+<script>
+
+id = null;
+
+// catching Buttons
+let start = document.querySelector("#start");
+let stop = document.querySelector("#stop");
+let reset = document.querySelector("#reset");
+let stop_Watch = document.querySelector(".stopwatch")
+
+// catching divs
+
+let milliseconds = document.querySelector(".milliseconds");
+let seconds = document.querySelector(".seconds");
+
+
+// creating elements and styling
+
+
+
+// 1. minute Element
+let minute = document.createElement("div");
+minute.style.width = "80px";
+minute.style.height = "80px";
+//minute.style.border = "2px solid brown";
+minute.style.display="flex";
+minute.style.alignItems="center";
+minute.style.justifyContent="center";
+minute.style.fontSize = "60px";
+minute.style.fontWeight = "500";
+
+
+
+// 2. hour Element
+let hour = document.createElement("div");
+hour.style.width = "80px";
+hour.style.height = "80px";
+//hour.style.border = "2px solid blue";
+hour.style.display="flex";
+hour.style.alignItems="center";
+hour.style.justifyContent="center";
+hour.style.fontSize = "60px";
+hour.style.fontWeight = "500";
+
+
+//Taking Variables
+
+let msec = 0;
+let sec = 0;
+let min = 0;
+let hr = 0;
+// start 
+start.addEventListener('click',function(){
+    id=setInterval(function(){
+        msec++
+        if (msec > 100){
+            sec++
+            msec=0
+            seconds.innerText=sec + "s"  
+            if (sec == 60){
+                sec=0
+                min++
+                stop_Watch.append(minute)
+                minute.innerText=min +"m"
+                if (min == 60){
+                    min=0
+                    hr++
+                    
+                    stop_Watch.append(hour)
+                    hour.innerText=hr +"hr"
+                }
+            }
+        }
+    milliseconds.innerText=msec},10)
+})
+
+// stop
+
+stop.addEventListener('click',function(e){
+    clearInterval(id)
+})
+
+// reset
+
+reset.addEventListener('click',function(){
+    clearInterval(id)
+    milliseconds.innerText="00"
+    seconds.innerText="00"
+    hour.innerText=""
+    minute.innerText=""
+    hour.style.display="none"
+    minute.style.display="none"
+
+})
+
+
+
+</script>
+
+</html>
