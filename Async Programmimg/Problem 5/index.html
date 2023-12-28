@@ -40,19 +40,25 @@
     ,"https://wallpaperaccess.com/full/2026102.png",
     "https://wallpapercave.com/wp/wp9070413.jpg","https://wallpapercave.com/wp/wp2715108.jpg","https://wallpapercave.com/wp/wp2715262.jpg"];
 
-    currentImage=0
+    let currentImage=0
     slideShow.setAttribute("src",imagesArr[currentImage])
     //slideShow.setAttribute("src",imagesArr[imagesArr.length-1])
 
+    var id = null
     //  Play Button
-
+    
     play.addEventListener("click",function(){
+        if (id === null){
         id=setInterval(function(){
             currentImage++
             if (currentImage>=imagesArr.length){
                 currentImage=0
             }
-            slideShow.setAttribute("src",imagesArr[currentImage])},2000)
+            slideShow.setAttribute("src",imagesArr[currentImage])},2000);}
+            else{
+                clearInterval(id)
+                id=null               
+            }
 
     })
 
