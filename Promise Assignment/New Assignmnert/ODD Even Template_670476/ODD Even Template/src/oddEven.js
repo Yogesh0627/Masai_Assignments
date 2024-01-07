@@ -1,5 +1,5 @@
 function getData(data) {
-    let promise1 = new Promise(function(resolve,reject){
+    return  promise1 = new Promise(function(resolve,reject){
         if (data % 2 == 0){
             setTimeout(function(){
                 resolve("Even")
@@ -12,13 +12,13 @@ function getData(data) {
         }
         else{reject("Error")}
     })
-    return promise1
+    // return promise1
 }
-// getData(10).then(function(data1){
-//     console.log(data1)}).catch(function(data2){
-//     console.log(data2)})
+getData(10).then(function(data1){
+    console.log(data1)}).catch(function(data2){
+    console.log(data2)})
 
 
-export default getData
+// export default getData
 
 
